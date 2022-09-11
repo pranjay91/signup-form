@@ -1,8 +1,24 @@
+#main{
+    text-align: center;
+} 
 h1 {
     color: #27aedb;
     text-align: center;
     }
-    
+.content{
+    max-width: 50%;
+    height: 50%;
+    border: 1px solid black;
+    margin: 20px 400px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+} 
+.label{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}   
 
 button{
     color: #27aedb;
