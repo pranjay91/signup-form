@@ -8,7 +8,7 @@ const App = () => {
   const handleSignup = ()=>{
     if (signupData.password.length > 0 && signupData.password.length >5 && signupData.name.length > 0 && signupData.phoneNumber.length >9  && 
        signupData.phoneNumber.length < 11 && signupData.email.length>0 && (validator.isEmail(signupData.email))) {
-          console.log("Signup Successfully")
+          console.log( "Signup Successfully")
           alert("Signup Successfully")
   } else {
       if (signupData.email.length === 0 ) {
@@ -33,36 +33,29 @@ const App = () => {
       <div className="content">
             <label for='name' className="label">Name <br/>
                 <input type='text' id='name' name='name' required placeholder='Name'
-                onChange={(e) => { setSignupData({ ...signupData, name: e.target.value }) }}
-                 />
+                onChange={(e) => { setSignupData({ ...signupData, name: e.target.value }) }}/>
             </label><br/>
             <label for='email' className="label">Email<br/>
                 <input type='email' id='email' name='email' required placeholder='Email'
-                onChange={(e) => { setSignupData({ ...signupData, email: e.target.value }) }}
-                 />
+                onChange={(e) => { setSignupData({ ...signupData, email: e.target.value }) }}/>
             </label><br/>
             <label for='gender' className="label">Gender<br/>
                 <select id='gender' name='gender' 
-                onChange={(e) => { setSignupData({ ...signupData, gender: e.target.value }) }}
-                class='gender'>
+                onChange={(e) => { setSignupData({ ...signupData, gender: e.target.value }) }} class='gender'>
                     <option value='male'>male</option>:
                     <option value='female'>female</option>
-                    <option value='other'>other</option>
+                    <option value='other'>others</option>
                 </select>
             </label><br/>
             <label for='phoneNumber' className="label">Phone Number <br/>
                 <input type='text' id='phoneNumber' name='phoneNumber' required placeholder='Phone Number'
-                onChange={(e) => { setSignupData({ ...signupData, phoneNumber: e.target.value }) }}
-                 />
+                  onChange={(e) => { setSignupData({ ...signupData, phoneNumber: e.target.value }) }}/>
             </label><br/>
             <label for='password' className="label">Password<br/>
                 <input type='password' id='password' name='password' required placeholder='password'
-                onChange={(e) => { setSignupData({ ...signupData, password: e.target.value }) }}
-                 />
+                      onChange={(e) => { setSignupData({ ...signupData, password: e.target.value }) }}/>
             </label><br/>
-            <button className="button" 
-            onClick={()=>{handleSignup()}}
-            >Submit</button>
+            <button className="button" onClick={()=>{handleSignup()}}>Submit</button>
 
       </div>
     </div>
